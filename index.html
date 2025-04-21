@@ -5,61 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ferit Akyıldız Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #0D1117;
-      color: #C9D1D9;
-    }
-    header {
-      background-color: #161B22;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: #58A6FF;
-      margin-left: 1.5rem;
-      text-decoration: none;
-    }
-    h1, h2 {
-      font-family: 'Poppins', sans-serif;
-    }
-    .container {
-      padding: 2rem;
-    }
-    .project {
-      background-color: #161B22;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-    }
-    .btn {
-      background-color: #58A6FF;
-      color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #1F6FEB;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #8B949E;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Ferit Akyıldız</h1>
     <nav>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -67,30 +20,57 @@
 
   <div class="container" id="about">
     <h2>About Me</h2>
-    <p>Computer engineering student interested in graphics and cybersecurity. Passionate about problem-solving and open-source contribution.</p>
+    <p>I’m a Computer Engineering student at Ankara Yıldırım Beyazıt University. I specialize in cybersecurity and graphics programming, with a strong passion for building creative and secure software. I enjoy contributing to open-source projects and learning new technologies that push the boundaries of what code can do.</p>
+  </div>
+
+  <div class="container" id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">C++</div>
+      <div class="skill">Java</div>
+      <div class="skill">Linux</div>
+      <div class="skill">Cybersecurity</div>
+      <div class="skill">Computer Graphics</div>
+      <div class="skill">Git</div>
+      <div class="skill">HTML/CSS</div>
+      <div class="skill">Blender</div>
+    </div>
   </div>
 
   <div class="container" id="projects">
     <h2>Projects</h2>
-    <div class="project">
+    <div class="project" onclick="toggleDetails(this)">
       <h3>Multiprocessed Battleships Game</h3>
-      <p>Implemented using C and Linux process management, where the computer plays against itself.</p>
+      <p class="details">Developed a Battleship game where the computer autonomously plays against itself using inter-process communication in C and Linux. Implemented synchronization and resource control.</p>
     </div>
-    <div class="project">
+    <div class="project" onclick="toggleDetails(this)">
       <h3>Audio Processing Program</h3>
-      <p>Developed a real-time audio visualizer with echo/bass/reverb effects using Python and Librosa.</p>
+      <p class="details">Real-time audio visualizer with interactive audio effects such as echo, bass boost, and reverb. Built with Python, Librosa, and Matplotlib.</p>
+    </div>
+    <div class="project" onclick="toggleDetails(this)">
+      <h3>Open Source Graphics Contribution</h3>
+      <p class="details">Contributed to an open-source 3D rendering engine by fixing shading bugs and optimizing fragment shader performance using GLSL.</p>
     </div>
   </div>
 
   <div class="container" id="contact">
     <h2>Contact</h2>
-    <p>Email: ferit_akyildiz_2003@hotmail.com</p>
-    <p>GitHub: <a href="https://github.com/fAkyildiz" target="_blank" style="color:#58A6FF">fAkyildiz</a></p>
-    <p>LinkedIn: <a href="https://tr.linkedin.com/in/ferit-aky%C4%B1ld%C4%B1z-066446272" target="_blank" style="color:#58A6FF">Ferit Akyıldız</a></p>
+    <p>Email: <a href="mailto:ferit_akyildiz_2003@hotmail.com">ferit_akyildiz_2003@hotmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/fAkyildiz" target="_blank">github.com/fAkyildiz</a></p>
+    <p>LinkedIn: <a href="https://tr.linkedin.com/in/ferit-aky%C4%B1ld%C4%B1z-066446272" target="_blank">Ferit Akyıldız</a></p>
   </div>
 
   <footer>
-    &copy; 2025 Ferit Akyıldız. All rights reserved.
+    &copy; 2025 Ferit Akyıldız. Designed with 💻 in Ankara.
   </footer>
+
+  <script>
+    function toggleDetails(project) {
+      const p = project.querySelector('.details');
+      p.style.display = p.style.display === 'none' ? 'block' : 'none';
+    }
+    document.querySelectorAll('.details').forEach(p => p.style.display = 'none');
+  </script>
 </body>
 </html>
