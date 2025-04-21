@@ -86,3 +86,52 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.btn {
+  background-color: #58A6FF;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #1F6FEB;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .project {
+    padding: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
