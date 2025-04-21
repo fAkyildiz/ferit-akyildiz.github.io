@@ -148,6 +148,5 @@ img {
 
 .profile-pic {
   width: 100%;
-  transform: translateY(-20px); /* Adjust to show upper body */
   display: block;
 }
